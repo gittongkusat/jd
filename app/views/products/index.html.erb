@@ -1,3 +1,13 @@
+<div class="w1200 clearfix bc mt50 pb20">
+  <div class="logo fl"><%=link_to("化妆品网站", products_path, class: "col-red")%></div>
+  <div class="fl ml30 mt10">
+    <%= render :partial => "products/search_bar" %>
+  </div>
+  <div class="fl mt10 cart-left">
+      <%= render :partial => "products/cart" %>
+  </div>
+</div>
+<%= render :partial => "products/menu" %>
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">

@@ -1,0 +1,21 @@
+<div class="w1200 clearfix bc mt50 pb20">
+  <div class="logo fl"><%=link_to("全部商品", products_path, class: "col-red")%></div>
+  <div class="fl ml30 mt10">
+    <%= render :partial => "products/search_bar" %>
+  </div>
+
+</div>
+
+<div class="w1200 bc">
+	<br>
+	<div class="search-result">
+
+	  <table class="table table-borderd">
+	    <% @products.each do |product| %>
+	      <%= link_to(render_highlight_content(product,@query_string),product_path(product)) %>
+	      <hr>
+	    <% end %>
+	 </table>
+
+	</div>
+</div>
