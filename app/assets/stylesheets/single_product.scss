@@ -1,0 +1,241 @@
+/*-- Single-Product-Styling --*/
+
+.w3aitssinglewthree {
+	padding: 100px 0;
+	background-color: #F5F5F5;
+}
+
+.single-top-right h1 {
+	font-size: 30px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+	/*-- Ratings --*/
+
+	.rating {
+		margin: 20px 0;
+	}
+
+	.rating {
+		line-height: 18px;
+		display: inline-block;
+	}
+
+	.starRating:not(old) {
+		display: inline-block;
+		height: 18px;
+		width: 100px;
+		overflow: hidden;
+	}
+
+	.starRating:not(old) > input {
+		margin-right: -100%;
+		opacity: 0;
+	}
+
+	.starRating:not(old) > label {
+		float: right;
+		background: url("../images/star.png");
+		background-size: contain;
+		margin-right: 2px;
+	}
+
+	.starRating:not(old) > label:before {
+		content: '';
+		display: block;
+		width: 18px;
+		height: 18px;
+		background: url("../images/star1.png");
+		background-size: contain;
+		opacity: 0;
+		transition: opacity 0.2s linear;
+	}
+
+	.starRating:not(old) > label:hover:before, .starRating:not(old) > label:hover ~ label:before, .starRating:not(:hover) > :checked ~ label:before {
+		opacity: 1;
+	}
+
+	/*-- //Ratings --*/
+
+.single-top-right {
+	padding-left: 5em;
+}
+
+.single-price ul li {
+	font-size: 16px;
+	line-height: 40px;
+	display: block;
+	color: #000;
+}
+
+.single-price ul li:nth-child(1) {
+	font-size: 50px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.single-price ul li:nth-child(1) small {
+	font-size: 20px;
+	color: #c41228;
+}
+
+.single-price ul li:nth-child(4) a i.fa {
+	margin-right: 10px;
+}
+.single-price ul li a {
+	color: #31708f;
+}
+.single-price ul li a:hover {
+	color: #c41228;
+}
+p.single-price-text {
+	margin: 20px 0;
+	line-height: 25px;
+}
+
+.single-top-right form {
+	display: inline;
+}
+
+.aitssinglew3 {
+	width: 100%;
+	border: none;
+}
+
+.aitssinglew3 .agileits.my-cart-btn {
+	background-color: #31708f!important;
+	border: none!important;
+	outline: none!important;
+	color: #FFF!important;
+	width: 48%!important;
+	font-weight: 300!important;
+	padding: 10px 0!important;
+	font-size: 14px!important;
+	-webkit-transition: .5s all;
+	-moz-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	transition: .5s all;
+	display: inline-block!important;
+	float: left;
+}
+
+.single-top-right i.fa {
+	margin-right: 5px;
+}
+
+.aitssinglew3 .agileits.my-cart-btn:hover {
+	background: #c41228!important;
+}
+
+.single-top-right .agilesocialwthree {
+	width: 100%;
+	text-align: left;
+	margin-top: 50px;
+}
+
+.agilesocialwthree h4 {
+	text-align: left;
+	margin-bottom: 10px;
+	color: #c41228;
+}
+
+.aitsaccordionw3layouts {
+	margin-top: 50px;
+}
+
+.aitsaccordionw3layouts .panel-heading {
+	padding: 15px;
+	background-color: #31708f;
+	border: none;
+	color: #FFF;
+	border-radius: 0;
+}
+
+.aitsaccordionw3layouts .panel-title {
+	text-align: left;
+}
+
+.aitsaccordionw3layouts .panel-heading .panel-title > a {
+	color: #FFF;
+}
+
+.aitsaccordionw3layouts .panel-heading .collapsed span, .pa_italic i {
+	left: 0;
+	font-size: 15px;
+	float: right;
+}
+
+.aitsaccordionw3layouts .panel-collapse {
+	background-color: #FFF;
+}
+
+.ac-img {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.accordion-image img {
+	width: 40%;
+}
+
+.aitsaccordionw3layouts div#collapseThree {
+	padding: 30px 30px 50px;
+}
+
+.aitsaccordionw3layouts div#collapseThree h3 {
+	margin-bottom: 20px;
+}
+
+.aitsaccordionw3layouts div#collapseThree h4 {
+	text-align: left;
+	font-size: 16px;
+	color: #F44336;
+	margin-bottom: 10px;
+}
+
+.aitsaccordionw3layouts div#collapseThree p {
+	margin-bottom: 20px;
+}
+
+.aitsaccordionw3layouts div#collapseThree span {
+	background: url("../images/5stars.png") no-repeat 0px 0px;
+	color: #31708f;
+	font-weight: 500;
+	padding-left: 140px;
+	padding-top: 4px;
+}
+
+.aitsaccordionw3layouts div#collapseFour {
+	padding: 30px;
+}
+
+.aitsaccordionw3layouts ul.ship {
+	margin-left: 20px;
+}
+
+.aitsaccordionw3layouts ul.ship li {
+	font-size: 16px;
+	line-height: 30px;
+	display: block;
+	color: #000;
+}
+
+.aitsaccordionw3layouts ul.ship li i.fa {
+	margin-right: 10px;
+}
+
+.aitsaccordionw3layouts ul.ship li i.fa.fa-male {
+	margin-right: 18px;
+}
+
+.aitsaccordionw3layouts a.next {
+	float: right;
+	margin: 30px 30px 0 0;
+	color: #F44336;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/*-- //Single-Product-Styling --*/
