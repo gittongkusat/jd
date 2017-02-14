@@ -1,0 +1,13 @@
+
+
+
+
+<p class="productList-item-pic w400 h400">
+  <%= link_to product_path(hufu) do %>
+    <% if hufu.image.present? %>
+      <%= image_tag(hufu.image.medium.url, class: "mediumnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "mediumnail") %>
+    <% end %>
+  <% end %>
+</p>

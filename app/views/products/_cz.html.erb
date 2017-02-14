@@ -1,0 +1,10 @@
+<div class="col-xs-6 col-md-3">
+  <%= link_to product_path(cz) do %>
+    <% if cz.image.present? %>
+      <%= image_tag(cz.image.medium.url, class: "mediumnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "mediumnail") %>
+    <% end %>
+  <% end %>
+
+</div>

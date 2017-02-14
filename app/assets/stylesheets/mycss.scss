@@ -112,5 +112,31 @@
     a:link {color: #FFF}
     a:visited {color: #fff}
 
+}
+
+body {
+    color: #2E2E2E;
+    font-family: "Microsoft Yahei",verdana;
+    background: #F5F5F5;
+  }
+
+  .productList-item {
+    width: 420px;
+    height: 500px;
+    background: #fff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-width: 2px;
+    border-color: #ce90a9;
+    border-style: solid;
+}
+ .productList-item-name {
+    color: #333;
+}
+.ell {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
 
 }

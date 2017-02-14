@@ -8,17 +8,144 @@
   </div>
 </div>
 <%= render :partial => "products/menu" %>
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+
+<div class="fenlei">热门商品</div>
+<div class="productList-wrap mt30 bc">
+    <ul class="productList clearfix pl10 pr10 pb20">
+       <% @products.limit(6).each_with_index do |product, index| %>
+        <% if index > 0 && (index + 1) % 3 == 0 %>
+          <li class="fl productList-item productList-lastItem p15">
         <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <li class="fl productList-item p15">
         <% end %>
+            <p class="productList-item-pic w400 h400">
+              <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                  <%= image_tag(product.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                <% end %>
+              <% end %>
+          </p>
+          <p class="productList-item-price fb col-red f18 ml150 mt10">￥<%= product.price %></p>
+          <p class="productList-item-name ell">
+            <%= link_to product_path(product) do %>
+               <%= product.title %>
+            <% end %>
+          </p>
+
+        </li>
+
       <% end %>
-      <%= product.title %> ￥ <%= product.price %>
-    </div>
-  <% end %>
+    </ul>
+</div>
+
+
+
+<div class="fenlei">护肤</div>
+
+
+
+
+<div class="productList-wrap mt30 bc">
+    <ul class="productList clearfix pl10 pr10 pb20">
+       <% @hufus.limit(6).each_with_index do |hufu, index| %>
+        <% if index > 0 && (index + 1) % 3 == 0 %>
+          <li class="fl productList-item productList-lastItem p15">
+        <% else %>
+          <li class="fl productList-item p15">
+        <% end %>
+            <p class="productList-item-pic w400 h400">
+              <%= link_to product_path(hufu) do %>
+                <% if hufu.image.present? %>
+                  <%= image_tag(hufu.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                <% end %>
+              <% end %>
+          </p>
+          <p class="productList-item-price fb col-red f18 ml150 mt10">￥<%= hufu.price %></p>
+          <p class="productList-item-name ell">
+            <%= link_to product_path(hufu) do %>
+               <%= hufu.title %>
+            <% end %>
+          </p>
+
+        </li>
+
+      <% end %>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+<div class="fenlei">日化清洁</div>
+
+<div class="productList-wrap mt30 bc">
+    <ul class="productList clearfix pl10 pr10 pb20">
+       <% @cleans.limit(6).each_with_index do |clean, index| %>
+        <% if index > 0 && (index + 1) % 3 == 0 %>
+          <li class="fl productList-item productList-lastItem p15">
+        <% else %>
+          <li class="fl productList-item p15">
+        <% end %>
+            <p class="productList-item-pic w400 h400">
+              <%= link_to product_path(clean) do %>
+                <% if clean.image.present? %>
+                  <%= image_tag(clean.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                <% end %>
+              <% end %>
+          </p>
+          <p class="productList-item-price fb col-red f18 ml150 mt10">￥<%= clean.price %></p>
+          <p class="productList-item-name ell">
+            <%= link_to product_path(clean) do %>
+               <%= clean.title %>
+            <% end %>
+          </p>
+
+        </li>
+
+      <% end %>
+    </ul>
+</div>
+
+<div class="fenlei">彩妆</div>
+
+<div class="productList-wrap mt30 bc">
+    <ul class="productList clearfix pl10 pr10 pb20">
+       <% @czs.limit(6).each_with_index do |cz, index| %>
+        <% if index > 0 && (index + 1) % 3 == 0 %>
+          <li class="fl productList-item productList-lastItem p15">
+        <% else %>
+          <li class="fl productList-item p15">
+        <% end %>
+            <p class="productList-item-pic w400 h400">
+              <%= link_to product_path(cz) do %>
+                <% if cz.image.present? %>
+                  <%= image_tag(cz.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                <% end %>
+              <% end %>
+          </p>
+          <p class="productList-item-price fb col-red f18 ml150 mt10">￥<%= cz.price %></p>
+          <p class="productList-item-name ell">
+            <%= link_to product_path(cz) do %>
+               <%= cz.title %>
+            <% end %>
+          </p>
+
+        </li>
+
+      <% end %>
+    </ul>
+</div>
+
 </div>

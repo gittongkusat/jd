@@ -12,6 +12,27 @@
   <div class="group">
     <%= f.input :price %>
   </div>
+  <div class="group">
+    <%= f.input :category, label: "所属分类" %>
+  </div>
+  <div class="group">
+    <%= f.input :pinpai, label: "所属品牌" %>
+  </div>
+  <div class="group">
+    <%= f.input :location, label: "产地" %>
+  </div>
+  <div class="group">
+    <%= f.input :fuzhi, label: "适合肤质" %>
+  </div>
+  <div class="group">
+    <%= f.input :product_date, label: "生产日期" %>
+  </div>
+  <div class="group">
+    <%= f.input :baozhiqi,label: "保质期" %>
+  </div>
+  <div class="group">
+    <%= f.input :baozhuang, label: "包装方式" %>
+  </div>
   <% if @product.image.present? %>
     <span>目前商品图</span><br>
     <%= image_tag(@product.image.thumb.url) %>

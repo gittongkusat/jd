@@ -15,6 +15,7 @@ class Admin::ProductsController < ApplicationController
   end
   def index
     @products = Product.all
+    
   end
   def edit
     @product = Product.find(params[:id])
@@ -39,7 +40,7 @@ class Admin::ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image,:category, :pinpai, :location, :fuzhi, :product_date, :baozhiqi, :baozhuang)
   end
 
 

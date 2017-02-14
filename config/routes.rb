@@ -10,6 +10,7 @@ resources :products do
   end
   collection do
     get :search
+
   end
 end
 

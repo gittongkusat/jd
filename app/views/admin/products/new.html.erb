@@ -13,6 +13,28 @@
     <%= f.input :price %>
   </div>
   <div class="group">
+    <%= f.input :category, label: "所属分类" %>
+  </div>
+  <div class="group">
+    <%= f.input :pinpai, label: "所属品牌" %>
+  </div>
+  <div class="group">
+    <%= f.input :location, label: "产地" %>
+  </div>
+  <div class="group">
+    <%= f.input :fuzhi, label: "适合肤质" %>
+  </div>
+  <div class="group">
+    <%= f.input :product_date, label: "生产日期", input_html: {value: '详见商品包装'} %>
+  </div>
+  <div class="group">
+    <%= f.input :baozhiqi,label: "保质期", input_html: {value: '3年（具体日期以收到实物为准'} %>
+  </div>
+  <div class="group">
+    <%= f.input :baozhuang, label: "包装方式", input_html: {value: '盒装'} %>
+  </div>
+
+  <div class="group">
     <%= f.input :image, as: :file %>
   </div>
   <%= f.submit "Submit",data: { disable_with: "Submiting..."} %>

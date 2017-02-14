@@ -3,10 +3,14 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   def index
     @products = Product.all
+    @hufus = Product.where(category: "护肤")
+    @cleans = Product.where(category: "日化清洁")
+    @czs = Product.where(category: "彩妆")
   end
+
+
   def show
     @product = Product.find(params[:id])
-
   end
 
   def add_to_cart
