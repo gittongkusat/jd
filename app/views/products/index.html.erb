@@ -10,7 +10,7 @@
 <%= render :partial => "products/menu" %>
 
 <div class="fenlei">热门商品</div>
-<div class="productList-wrap mt30 bc">
+<div class="productList-wrap mt30 bc" id="bg">
     <ul class="productList clearfix pl10 pr10 pb20">
        <% @products.limit(6).each_with_index do |product, index| %>
         <% if index > 0 && (index + 1) % 3 == 0 %>

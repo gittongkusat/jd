@@ -1,4 +1,13 @@
-<%= render :partial => "products/search_bar" %>
+<div class="w1200 clearfix bc mt50 pb20">
+  <div class="logo fl"><%=link_to("化妆品网站", products_path, class: "col-red")%></div>
+<div class="fl ml30 mt10">
+  <%= render :partial => "products/search_bar" %>
+</div>
+<div class="fl mt10 cart-left">
+    <%= render :partial => "products/cart" %>
+</div>
+</div>
+<%= render :partial => "products/menu" %>
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
@@ -16,7 +25,7 @@
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
+    <div class="pull-left">
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
       <% else %>
